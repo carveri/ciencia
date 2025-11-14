@@ -12,5 +12,5 @@ app.use('/api', cientificosRouter)
 
 
 app.listen(PORT, ()=>{
-    console.log('server corriendo con mensajes');
+    console.log('server corriendo con mensajes ojala!');
 })
