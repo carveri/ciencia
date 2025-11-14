@@ -47,7 +47,12 @@ jobs:
       - name: "paso5: mostrar mi variable, el host y la pas"
         run: |
           echo "mi host: ${{env.HOST_PG}}"
-          echo "api url: ${{env.PASSWORD_PG}}"
+          echo "mi pass: ${{env.PASSWORD_PG}}"
+      - name: Ejecutar script de Node.js con secretos
+        run: node -e "console.log(process.env.HOST_PG)"
+        env:
+          # Asigna el secreto de GitHub a una variable de entorno llamada MI_SECRETO
+          MI_HOST: ${{ secrets.HOST_PG }}
        
 
       
