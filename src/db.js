@@ -1,7 +1,7 @@
 
 import pg from "pg";
 
-//process.loadEnvFile()
+process.loadEnvFile()
 
 
 
