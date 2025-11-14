@@ -10,6 +10,9 @@ const PORT = process.env.PORT ?? 3000
 app.use(express.json())
 app.use('/api', cientificosRouter)
 
+console.log('MI CONTRASEÑA:', process.env.PASSWORD_PG);
+
+
 
 app.listen(PORT, ()=>{
     console.log('server corriendo con mensajes ojala!');

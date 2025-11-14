@@ -22,8 +22,11 @@ jobs:
       region: us-east-1
       account: 34221212
 
+      USER_PG: ${{secrets.USER_PG}}
       HOST_PG: ${{secrets.HOST_PG}}
       PASSWORD_PG: ${{secrets.PASSWORD_PG}}
+      DATABASE_PG: ${{secrets.DATABASE_PG}}
+      PORT_PG: ${{secrets.PORT_PG}}
 
     runs-on: ubuntu-latest
 
@@ -48,11 +51,15 @@ jobs:
         run: |
           echo "mi host: ${{env.HOST_PG}}"
           echo "mi pass: ${{env.PASSWORD_PG}}"
-      - name: Ejecutar script de Node.js con secretos
+      - name: "paso6: Ejecutar script de Node.js con secretos"
         run: node -e "console.log(process.env.HOST_PG)"
         env:
           # Asigna el secreto de GitHub a una variable de entorno llamada MI_SECRETO
-          MI_HOST: ${{ secrets.HOST_PG }}
+          USER_PG: ${{secrets.USER_PG}}
+          HOST_PG: ${{secrets.HOST_PG}}
+          PASSWORD_PG: ${{secrets.PASSWORD_PG}}
+          DATABASE_PG: ${{secrets.DATABASE_PG}}
+          PORT_PG: ${{secrets.PORT_PG}}
        
 
       
