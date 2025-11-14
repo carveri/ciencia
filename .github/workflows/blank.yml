@@ -37,5 +37,10 @@ jobs:
           echo "plataforma: ${{env.platform}}"
           echo "region: ${{env.region}}"
           echo "account: ${{env.account}}"
+      - name: "paso4: mostrar variables por defecto"
+        run: |
+          echo "evento: ${{toJson(github.event)}}"
+          echo "api url: ${{toJson(github.api_url)}}"
+       
 
       
