@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "type": "module",
- 
   "scripts": {
     "dev": "node --watch src/index.js"
   },
@@ -15,7 +14,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  
   "bugs": {
     "url": "https://github.com/carveri/ciencia/issues"
   },

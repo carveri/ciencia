@@ -1,9 +1,9 @@
 
 import pg from "pg";
-process.loadEnvFile()
 
-// import { config } from "dotenv";
-// config()
+//process.loadEnvFile()
+
+
 
 export const pool = new pg.Pool({
     user: process.env.USER_PG,
