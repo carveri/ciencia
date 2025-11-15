@@ -1,7 +1,7 @@
 
 import express from "express";
 import cientificosRouter from "../src/routes/cientifico.router.js";
-process.loadEnvFile()
+
 
 
 const app = express()

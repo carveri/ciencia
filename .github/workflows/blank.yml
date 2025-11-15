@@ -65,12 +65,28 @@ jobs:
         run: node -e "console.log(process.env.HOST_PG)"
         env:
           # Asigna el secreto de GitHub a una variable de entorno llamada MI_SECRETO
-          CI: true
+          
           USER_PG: ${{secrets.USER_PG}}
           HOST_PG: ${{secrets.HOST_PG}}
           PASSWORD_PG: ${{secrets.PASSWORD_PG}}
           DATABASE_PG: ${{secrets.DATABASE_PG}}
           PORT_PG: ${{secrets.PORT_PG}}
        
+      - name: "paso8: hacer un echo para las variables"
+        run: |
+          echo "mi host: ${{secrets.HOST_PG}}"
+          echo "mi pass: ${{secrets.PASSWORD_PG}}"
+          echo "mi user: ${{secrets.USER_PG}}"
+          echo "mi database: ${{secrets.DATABASE_PG}}"
+          echo "mi port: ${{secrets.PORT_PG}}"
+        
+        env:
+          # Asigna el secreto de GitHub a una variable de entorno llamada MI_SECRETO
+          
+          USER_PG: ${{secrets.USER_PG}}
+          HOST_PG: ${{secrets.HOST_PG}}
+          PASSWORD_PG: ${{secrets.PASSWORD_PG}}
+          DATABASE_PG: ${{secrets.DATABASE_PG}}
+          PORT_PG: ${{secrets.PORT_PG}}
 
       
